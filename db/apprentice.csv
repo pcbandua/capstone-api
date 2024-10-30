@@ -1,0 +1,12 @@
+email,password_digest,address,education,holland_code
+deena@gmail.com,password,Tacoma, WA,Highschool G.E.D.,ISC
+temi@gmail.com,password,Seattle, WA,Highschool G.E.D.,AIS
+nicolas@gmail.com,password,Houston, TX,Highschool G.E.D.,SIA
+tracy_l@gmail.com,password,Port Chester, NY,Highschool G.E.D.,RIE
+kendo@gmail.com,password,Mt. Vernon, NY,Undergraduate Degree,RIC
+ishan@gmail.com,password,Los Angeles, CA,Undergraduate Degree,EIR
+oscar_ramirez@gmail.com,password,San Francisco, CA,Associates Degree,CIR
+dennis@gmail.com,password,Frisco, TX,Associates Degree,ERS
+keyon_r@gmail.com,password,Denver, CO,Graduate Degree or Higher,ASC
+kenya@gmail.com,password,Tulsa, OK,Graduate Degree or Higher,SCE
+sasha@gmail.com,password,Portland, OR,Graduate Degree or Higher,ISC
