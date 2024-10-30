@@ -21,3 +21,17 @@ CSV.foreach(csv_file_path, headers: true) do |row|
     holland_code: row["holland_code"],
   )
 end
+
+employer_csv_file_path = Rails.root.join("db", "employer.csv")
+
+CSV.foreach(employer_csv_file_path, headers: true) do |row|
+  Employer.create!(
+    email: row["email"],
+    password_digest: row["password_digest"],
+    company_name: row["company_name"],
+    company_logo: row["company_logo"],
+    description: row["description"],
+    industry: row["industry"],
+    website: row["website"],
+  )
+end
