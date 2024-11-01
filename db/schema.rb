@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_30_185201) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_01_015532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applications", force: :cascade do |t|
+    t.integer "apprentice_id"
+    t.integer "apprenticeship_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "apprentices", force: :cascade do |t|
     t.string "email"
@@ -20,6 +28,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_30_185201) do
     t.string "address"
     t.string "education"
     t.string "holland_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "apprenticeships", force: :cascade do |t|
+    t.integer "employer_id"
+    t.string "title"
+    t.string "summary"
+    t.string "location_status"
+    t.string "skills_required"
+    t.string "qualifications"
+    t.string "holland_code_preference"
+    t.string "compensation"
+    t.string "duration"
+    t.integer "positions_available"
+    t.string "national_recognition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

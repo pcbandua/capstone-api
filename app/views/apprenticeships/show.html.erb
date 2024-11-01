@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @apprenticeship %>
+
+<div>
+  <%= link_to "Edit this apprenticeship", edit_apprenticeship_path(@apprenticeship) %> |
+  <%= link_to "Back to apprenticeships", apprenticeships_path %>
+
+  <%= button_to "Destroy this apprenticeship", @apprenticeship, method: :delete %>
+</div>

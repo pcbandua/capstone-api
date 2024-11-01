@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employer_id: 1
+  title: MyString
+  summary: MyString
+  location_status: MyString
+  skills_required: MyString
+  qualifications: MyString
+  holland_code_preference: MyString
+  compensation: MyString
+  duration: MyString
+  positions_available: 1
+  national_recognition: MyString
+
+two:
+  employer_id: 1
+  title: MyString
+  summary: MyString
+  location_status: MyString
+  skills_required: MyString
+  qualifications: MyString
+  holland_code_preference: MyString
+  compensation: MyString
+  duration: MyString
+  positions_available: 1
+  national_recognition: MyString

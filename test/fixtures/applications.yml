@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apprentice_id: 1
+  apprenticeship_id: 1
+  status: MyString
+
+two:
+  apprentice_id: 1
+  apprenticeship_id: 1
+  status: MyString
