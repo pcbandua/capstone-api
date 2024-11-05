@@ -11,7 +11,7 @@ class CreateApprenticeships < ActiveRecord::Migration[7.1]
       t.string :compensation
       t.string :duration
       t.integer :positions_available
-      t.string :national_recognition
+      t.string :national_registered_status
 
       t.timestamps
     end

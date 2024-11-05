@@ -35,3 +35,21 @@ CSV.foreach(employer_csv_file_path, headers: true) do |row|
     website: row["website"],
   )
 end
+
+apprenticeship_csv_file_path = Rails.root.join("db", "apprenticeship.csv")
+
+CSV.foreach(apprenticeship_csv_file_path, headers: true) do |row|
+  Apprenticeship.create!(
+    employer_id: row["employer_id"],
+    title: row["title"],
+    summary: row["summary"],
+    location_status: row["location_status"],
+    skills_required: row["skills_required"],
+    qualifications: row["qualifications"],
+    holland_code_preference: row["holland_code_preference"],
+    compensation: row["compensation"],
+    duration: row["duration"],
+    positions_available: row["positions_available"],
+    national_registered_status: row["national_registered_status"],
+  )
+end

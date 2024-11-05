@@ -11,7 +11,7 @@ one:
   compensation: MyString
   duration: MyString
   positions_available: 1
-  national_recognition: MyString
+  national_registered_status: MyString
 
 two:
   employer_id: 1
@@ -24,4 +24,4 @@ two:
   compensation: MyString
   duration: MyString
   positions_available: 1
-  national_recognition: MyString
+  national_registered_status: MyString
