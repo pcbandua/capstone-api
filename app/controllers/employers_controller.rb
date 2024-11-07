@@ -20,7 +20,7 @@ class EmployersController < ApplicationController
 
   #Create Action
   def create
-    @employer = Employer.create(
+    @employer = Employer.new(
       email: params[:email],
       password_digest: params[:password_digest],
       company_name: params[:company_name],
@@ -29,7 +29,11 @@ class EmployersController < ApplicationController
       industry: params[:industry],
       website: params[:website],
     )
-    render :show
+    if @employer.save
+      render json: { message: "Employer created successfully" }, status: :created
+    else
+      render json: { errors: @employer.errors.full_messages }, status: :bad_request
+    end
   end
 
   # Destroy Action

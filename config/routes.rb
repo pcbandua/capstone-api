@@ -35,6 +35,8 @@ Rails.application.routes.draw do
   get "employer/new" => "employer#new"
   delete "employer/:id" => "employer#destroy"
 
+  # Authentication
+  post "/sessions" => "sessions#create"
   # Defines the root path route ("/")
   # root "posts#index"
 end

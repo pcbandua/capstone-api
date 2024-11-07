@@ -15,7 +15,11 @@ class ApprenticesController < ApplicationController
       education: params[:education],
       holland_code: params[:holland_code],
     )
-    render :show
+    if @apprentice.save
+      render json: { message: "Apprentice account created successfully" }, status: :created
+    else
+      render json: { errors: @apprentice.errors.full_messages }, status: :bad_request
+    end
   end
 
   # Destroy Action
