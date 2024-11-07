@@ -1,2 +1,12 @@
-json.extract! apprenticeship, :id, :created_at, :updated_at
-json.url apprenticeship_url(apprenticeship, format: :json)
+json.id apprenticeship.id
+json.employer_id apprenticeship.employer_id
+json.title apprenticeship.title
+json.summary apprenticeship.summary
+json.location_status apprenticeship.location_status
+json.skills_required apprenticeship.skills_required
+json.qualifications apprenticeship.qualifications
+json.holland_code_preference apprenticeship.holland_code_preference
+json.compensation apprenticeship.compensation
+json.duration apprenticeship.duration
+json.positions_available apprenticeship.positions_available
+json.national_registered_status apprenticeship.national_registered_status

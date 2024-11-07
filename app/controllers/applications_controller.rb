@@ -4,6 +4,7 @@ class ApplicationsController < ApplicationController
   # GET /applications or /applications.json
   def index
     @applications = Application.all
+    render :index
   end
 
   # GET /applications/1 or /applications/1.json
@@ -58,13 +59,14 @@ class ApplicationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_application
-      @application = Application.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def application_params
-      params.require(:application).permit(:apprentice_id, :apprenticeship_id, :status)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_application
+    @application = Application.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def application_params
+    params.require(:application).permit(:apprentice_id, :apprenticeship_id, :status)
+  end
 end

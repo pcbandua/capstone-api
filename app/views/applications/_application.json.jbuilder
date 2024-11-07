@@ -1,2 +1,4 @@
-json.extract! application, :id, :created_at, :updated_at
-json.url application_url(application, format: :json)
+json.id application.id
+json.apprentice_id application.apprentice_id
+json.apprenticeship_id application.apprenticeship_id
+json.status application.status
