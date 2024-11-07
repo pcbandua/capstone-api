@@ -2,7 +2,7 @@ class ApprenticeshipsController < ApplicationController
 
   # New Action
   def new
-    @application = Application.new
+    @apprenticeship = Apprenticeship.new
     render json: @application
   end
 

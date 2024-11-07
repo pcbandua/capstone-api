@@ -21,6 +21,13 @@ Rails.application.routes.draw do
   get "apprenticeships/new" => "apprenticeships#new"
   delete "apprenticeships/:id" => "apprenticeships#destroy"
 
+  # Apprentice Routes
+  get "/apprentice" => "apprentice#index"
+  post "/apprentice" => "apprentice#create"
+  get "apprentice/:id" => "apprentice#show"
+  get "apprentice/new" => "apprentice#new"
+  delete "apprentice/:id" => "apprentice#destroy"
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
