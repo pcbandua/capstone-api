@@ -3,7 +3,7 @@ class ApprenticeshipsController < ApplicationController
   # New Action
   def new
     @apprenticeship = Apprenticeship.new
-    render json: @application
+    render json: @apprenticeship
   end
 
   # Index Action
