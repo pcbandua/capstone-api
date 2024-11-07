@@ -1,70 +1,53 @@
 class ApprenticeshipsController < ApplicationController
-  before_action :set_apprenticeship, only: %i[ show edit update destroy ]
 
-  # GET /apprenticeships or /apprenticeships.json
+  # New Action
+  def new
+    @application = Application.new
+    render json: @application
+  end
+
+  # Index Action
   def index
     @apprenticeships = Apprenticeship.all
+    render :index
   end
 
-  # GET /apprenticeships/1 or /apprenticeships/1.json
+  # Show Action
   def show
+    @apprenticeship = Apprenticeship.find_by(id: params[:id])
+    render :show
   end
 
-  # GET /apprenticeships/new
-  def new
-    @apprenticeship = Apprenticeship.new
-  end
-
-  # GET /apprenticeships/1/edit
-  def edit
-  end
-
-  # POST /apprenticeships or /apprenticeships.json
+  #Create Action
   def create
-    @apprenticeship = Apprenticeship.new(apprenticeship_params)
-
-    respond_to do |format|
-      if @apprenticeship.save
-        format.html { redirect_to @apprenticeship, notice: "Apprenticeship was successfully created." }
-        format.json { render :show, status: :created, location: @apprenticeship }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @apprenticeship.errors, status: :unprocessable_entity }
-      end
-    end
+    @apprenticeship = Apprenticeship.create(
+      employer_id: params[:employer_id],
+      title: params[:title],
+      summary: params[:summary],
+      location_status: params[:location_status],
+      skills_required: params[:skills_required],
+      qualifications: params[:qualifications],
+      holland_code_preference: params[:holland_code_preference],
+      compensation: params[:compensation],
+      duration: params[:duration],
+      positions_available: params[:positions_available],
+      national_registered_status: params[:national_registered_status],
+    )
+    render :show
   end
 
-  # PATCH/PUT /apprenticeships/1 or /apprenticeships/1.json
-  def update
-    respond_to do |format|
-      if @apprenticeship.update(apprenticeship_params)
-        format.html { redirect_to @apprenticeship, notice: "Apprenticeship was successfully updated." }
-        format.json { render :show, status: :ok, location: @apprenticeship }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @apprenticeship.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # Destroy Action
 
-  # DELETE /apprenticeships/1 or /apprenticeships/1.json
   def destroy
-    @apprenticeship.destroy!
+    @apprenticeship = Apprenticeship.find_by(id: params[:id])
 
-    respond_to do |format|
-      format.html { redirect_to apprenticeships_path, status: :see_other, notice: "Apprenticeship was successfully destroyed." }
-      format.json { head :no_content }
+    if @apprenticeship
+      @apprenticeship.destroy
+      render json: { message: "Apprenticeship deleted successfully" }, status: :ok
+    else
+      render json: { error: "Apprenticeship not found" }, status: :not_found
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_apprenticeship
-      @apprenticeship = Apprenticeship.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def apprenticeship_params
-      params.require(:apprenticeship).permit(:employer_id, :title, :summary, :location_status, :skills_required, :qualifications, :holland_code_preference, :compensation, :duration, :positions_available, :national_recognition)
-    end
+  render json: { messsge: "Apprenticeship successfully deleted" }
 end
