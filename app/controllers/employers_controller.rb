@@ -22,7 +22,8 @@ class EmployersController < ApplicationController
   def create
     @employer = Employer.new(
       email: params[:email],
-      password_digest: params[:password_digest],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation],
       company_name: params[:company_name],
       company_logo: params[:company_logo],
       description: params[:description],

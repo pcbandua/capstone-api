@@ -8,6 +8,13 @@ Bundler.require(*Rails.groups)
 
 module CapstoneApi
   class Application < Rails::Application
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins "http://localhost:3000" # Or the React app's URL if different
+    #     resource "*", headers: :any, methods: [:get, :post, :put, :delete, :options]
+    #   end
+    # end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 

@@ -8,9 +8,10 @@ class ApprenticesController < ApplicationController
 
   #Create Action
   def create
-    @apprentice = Apprentice.create(
+    @apprentice = Apprentice.new(
       email: params[:email],
-      password_digest: params[:password_digest],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation],
       address: params[:address],
       education: params[:education],
       holland_code: params[:holland_code],
