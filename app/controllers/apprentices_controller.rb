@@ -6,6 +6,12 @@ class ApprenticesController < ApplicationController
     render json: @apprentice
   end
 
+  def show
+    @apprentice = current_user
+    pp @apprentice
+    render :show
+  end
+
   #Create Action
   def create
     @apprentice = Apprentice.new(
