@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/apprenticeships/filters" => "apprenticeships#filters"
   resources :employers
   resources :apprentices
   resources :apprenticeships
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   get "applications/:id" => "applications#show"
 
   # Apprenticeship Routes
+
   get "/apprenticeships" => "apprenticeships#index"
   post "/apprenticeships" => "apprenticeships#create"
   get "apprenticeships/:id" => "apprenticeships#show"

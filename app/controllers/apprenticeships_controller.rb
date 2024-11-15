@@ -9,6 +9,9 @@ class ApprenticeshipsController < ApplicationController
   # Index Action
   def index
     @apprenticeships = Apprenticeship.all
+    @apprenticeships = Apprenticeship.where(holland_code_preference: params[:holland_code_preference]) if params[:holland_code_preference].present?
+    @apprenticeships = Apprenticeship.where(compensation: params[:compensation]) if params[:compensation].present?
+
     render :index
   end
 
@@ -50,4 +53,13 @@ class ApprenticeshipsController < ApplicationController
   end
 
   render json: { messsge: "Apprenticeship successfully deleted" }
+
+  # Filter action
+
+  def filters
+    holland_code_preference = Apprenticeship.select(:holland_code_preference).distinct.pluck(:holland_code_preference)
+    compensation = Apprenticeship.select(:compensation).distinct.pluck(:compensation)
+
+    render json: { holland_code_preference: holland_code_preference, compensation: compensation }
+  end
 end
