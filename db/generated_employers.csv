@@ -1,0 +1,11 @@
+employer_id,email,password_digest,company_name,company_logo,description,industry,website
+23,employer23@example.com,password,Tech Innovators,http://example.com/logo23.png,Tech Innovators is a leader in Technology services and innovation.,Technology,http://techinnovators.com
+24,employer24@example.com,password,HealthFirst Services,http://example.com/logo24.png,HealthFirst Services is a leader in Healthcare services and innovation.,Healthcare,http://healthfirstservices.com
+25,employer25@example.com,password,BuildRight Construction,http://example.com/logo25.png,BuildRight Construction is a leader in Construction services and innovation.,Construction,http://buildrightconstruction.com
+26,employer26@example.com,password,LearnQuest Academy,http://example.com/logo26.png,LearnQuest Academy is a leader in Education services and innovation.,Education,http://learnquestacademy.com
+27,employer27@example.com,password,Helping Hands Services,http://example.com/logo27.png,Helping Hands Services is a leader in Social Services and innovation.,Social Services,http://helpinghandsservices.com
+28,employer28@example.com,password,Softwave Solutions,http://example.com/logo28.png,Softwave Solutions is a leader in Technology services and innovation.,Technology,http://softwavesolutions.com
+29,employer29@example.com,password,WellCare Associates,http://example.com/logo29.png,WellCare Associates is a leader in Healthcare services and innovation.,Healthcare,http://wellcareassociates.com
+30,employer30@example.com,password,SafeHouse Contractors,http://example.com/logo30.png,SafeHouse Contractors is a leader in Construction services and innovation.,Construction,http://safehousecontractors.com
+31,employer31@example.com,password,FuturePath Learning,http://example.com/logo31.png,FuturePath Learning is a leader in Education services and innovation.,Education,http://futurepathlearning.com
+32,employer32@example.com,password,Community First,http://example.com/logo32.png,Community First is a leader in Social Services and innovation.,Social Services,http://communityfirst.com
