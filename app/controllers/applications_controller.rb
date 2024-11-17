@@ -13,18 +13,10 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @application = Application.create(
-      apprentice_id: params[:current_user_id],
+    @application = Application.create!(
+      apprentice_id: current_user.id,
       apprenticeship_id: params[:apprenticeship_id],
     )
     render :show
   end
-
-  # def create
-  #   @application = Application.create(
-  #     apprentice_id: params[:apprentice_id],
-  #     apprenticeship_id: params[:apprenticeship_id],
-  #   )
-  #   render :show
-  # end
 end

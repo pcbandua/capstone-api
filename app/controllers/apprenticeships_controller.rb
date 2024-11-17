@@ -23,7 +23,7 @@ class ApprenticeshipsController < ApplicationController
 
   #Create Action
   def create
-    @apprenticeship = Apprenticeship.create(
+    @apprenticeship = Apprenticeship.create!(
       employer_id: params[:employer_id],
       title: params[:title],
       summary: params[:summary],
