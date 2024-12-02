@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "render/index"
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
   get "/apprenticeships/filters" => "apprenticeships#filters"
   resources :employers
   resources :apprentices
@@ -41,4 +44,7 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Defines the root path route ("/")
+  root "render#index"
 end
